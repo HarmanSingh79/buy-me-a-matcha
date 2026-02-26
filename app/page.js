@@ -1,65 +1,59 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <div className="flex flex-col gap-4 justify-center items-center text-white h-[44vh] px-5 md:px-0 text-xs md:text-base text-center">
+        <div className="md:text-5xl text-3xl font-bold flex gap-2 items-center justify-center">
+          Buy Me A Matcha
+          <span>
+            <img className="rounded-full" width={70} src="/matcha.gif" alt="matcha gif"/>
+          </span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <p className="text-center md:text-left">A crowdfunding platform for creators. Get funded by your fans and followers.</p>
+
+        <p className="text-center md:text-left">Unleash the power of your fans and get your projects funded.</p>
+
+        <div className="flex gap-4 ">
+          <Link href={"/login"}>
+            <button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 rounded-full text-center leading-5">Start Here!</button></Link>
+
+          <Link href={"/about"}>
+            <button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 rounded-full text-center leading-5">Read More</button></Link>
         </div>
-      </main>
-    </div>
+      </div>
+
+      <div className="bg-white h-1 opacity-10"></div>
+
+      <div className='text-white container mx-auto md:py-8 py-5'>
+        <h2 className="font-bold text-center text-2xl mb-7">Fuel your creativity, one Matcha at a time</h2>
+        <div className='flex gap-5 justify-around p-4 text-center'>
+          <div className='item space-y-3 flex flex-col items-center justify-center'>
+            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt=""></img>
+            <p className="font-bold text-center">Share Ideas</p>
+            <p>Let your community in on your creative journey and goals.</p>
+          </div>
+          <div className='item space-y-3 flex flex-col items-center justify-center'>
+            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt=""></img>
+            <p className="font-bold text-center">Get Funded</p>
+            <p>Receive direct, hassle-free contributions from your audience.</p>
+          </div>
+          <div className='item space-y-3 flex flex-col items-center justify-center'>
+            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt=""></img>
+            <p className="font-bold text-center">Build Together</p>
+            <p>Grow a dedicated fanbase that helps bring your ideas to life.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white h-1 opacity-10"></div>
+
+      {/* 
+      <div className='text-white container mx-auto py-16'>
+        <h2 className="font-bold text-center text-2xl mb-7">Learn More About Us</h2>
+        
+      </div> */}
+
+    </>
   );
 }
