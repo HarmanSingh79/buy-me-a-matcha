@@ -50,7 +50,7 @@ export default function Contact() {
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     <div className="mt-22 flex flex-col gap-8">
-                        <div className="bg-slate-900/60 backdrop-blur-sm p-8 rounded-2xl border border-slate-800 shadow-xl">
+                        <div className="bg-slate-900/60 backdrop-blur-sm md:p-8 p-3 rounded-2xl border border-slate-800 shadow-xl">
                             <h3 className="text-2xl font-bold text-white mb-6">Chat with us</h3>
 
                             <div className="space-y-6">
